@@ -41,13 +41,14 @@ namespace Exponents
             UxOutputLabel.Text = "Square Root " + squareAnswer.ToString();
 
             /* calculate the cube of the number and add it to the output - 
-             * do this by creating a methd as in the squaring example above */
-
+             * do this by creating a method as in the squaring example above */
+            UxOutputLabel.Text += "\nCubed Number " + Cube(num).ToString();
             // OUTPUT
             // set the output to visible
             UxOutputLabel.Visible = true;
+
             // turn the Go button off
-        }
+        }   
 
         public int Square(int num) 
         {
@@ -55,14 +56,18 @@ namespace Exponents
             return num * num;
         }   
 
-        //public int Cube(int num)
-        //{
+        public int Cube(int num)
+        {
             // we will create this code in class
-        //}
+            return (num * num * num);
+        }
 
         private void xResetButton_Click(object sender, EventArgs e)
         {
             // the input and output text should be emptied
+            UxInputTextBox.Clear();
+            UxOutputLabel.Text = "";
+
             // turn the output to invisible
             // turn the Go button back on
         }
